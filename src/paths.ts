@@ -6,6 +6,7 @@ export const paths = {
     users: '/dashboard',
     tasks: '/dashboard/task',
     settings: '/dashboard/settings',
+    taskCreate: '/dashboard/task-create',
   },
   errors: { notFound: '/errors/not-found' },
 } as const;

@@ -104,13 +104,14 @@ export function TasksTable({
                   </TableCell>
                   <TableCell>
                     <Stack sx={{ alignItems: 'center' }} direction="row" spacing={2}>
-                      {/* <Avatar src={row.avatar} /> */}
                       <Typography variant="subtitle2">{row.title}</Typography>
                     </Stack>
                   </TableCell>
                   <TableCell>{row.description}</TableCell>
                   <TableCell>
-                  {row.helper}
+                    {row.helper && row.helper.firstName && row.helper.lastName
+                      ? `${row.helper.firstName} ${row.helper.lastName}`
+                      : "No helper available"}
                   </TableCell>
                   <TableCell>{row.seeker}</TableCell>
                   <TableCell>{row.status}</TableCell>
@@ -119,6 +120,7 @@ export function TasksTable({
               );
             })}
           </TableBody>
+
         </Table>
       </Box>
       <Divider />
